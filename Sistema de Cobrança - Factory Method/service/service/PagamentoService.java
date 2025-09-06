@@ -105,7 +105,7 @@ public class PagamentoService {
     private double lerValor(Scanner sc, String prompt) {
         System.out.print(prompt);
         while (true) {
-            String s = sc.nextLine().trim().replace(",", "."); // aceita 199,90 ou 199.90
+            String s = sc.nextLine().trim().replace(",", ".");
             try {
                 double v = Double.parseDouble(s);
                 if (v > 0) return v;
